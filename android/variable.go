@@ -85,6 +85,10 @@ type variableProperties struct {
 			Cflags []string
 		}
 
+		Target_init_vendor_lib struct {
+			Whole_static_libs []string
+		}
+
 		// debuggable is true for eng and userdebug builds, and can be used to turn on additional
 		// debugging features that don't significantly impact runtime behavior.  userdebug builds
 		// are used for dogfooding and performance testing, and should be as similar to user builds
@@ -392,6 +396,8 @@ type productVariables struct {
 	SelinuxIgnoreNeverallows bool `json:",omitempty"`
 
 	SepolicySplit bool `json:",omitempty"`
+
+	Target_init_vendor_lib  *string `json:",omitempty"`
 }
 
 func boolPtr(v bool) *bool {
