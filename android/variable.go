@@ -449,6 +449,8 @@ type productVariables struct {
 
 	GenerateAidlNdkPlatformBackend bool `json:",omitempty"`
 
+	ForceMultilibFirstOnDevice bool `json:",omitempty"`
+
 	Target_init_vendor_lib  *string `json:",omitempty"`
 }
 
